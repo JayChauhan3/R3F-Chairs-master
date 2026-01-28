@@ -1,10 +1,5 @@
 {
   "buildCommand": "CI=false pnpm build",
   "installCommand": "pnpm install",
-  "framework": "create-react-app",
-  "functions": {
-    "src/**/*.js": {
-      "maxDuration": 30
-    }
-  }
+  "framework": "create-react-app"
 }
