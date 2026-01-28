@@ -73,14 +73,28 @@ header {
               color: #fff;
               font-weight: 600;
               background: #23232a;
-              padding: 16px 24px;
-              border-radius: 10px;
+              padding: 16px;
+              border-radius: 0;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              font-size: 14px;
+              transition: all 0.3s ease;
+            }
+            a:hover {
+              background: #000;
             }
           }
           a {
-            text-transform: capitalize;
+            text-transform: uppercase;
             text-decoration: none;
             color: #000;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+          }
+          a:hover {
+            opacity: 0.7;
           }
         }
       }
