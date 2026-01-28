@@ -60,7 +60,7 @@ const HTMLContent = ({
   });
   useEffect(() => {
     inView && (document.body.style.background = bgColor);
-  }, [inView]);
+  }, [inView, bgColor]);
   return (
     <Section factor={1.5} offset={1}>
       <group position={[0, position, 0]}>
@@ -97,7 +97,6 @@ function Loader() {
 }
 
 export default function App() {
-  const [events, setEvents] = useState();
   const domContent = useRef();
   const scrollArea = useRef();
   const onScroll = (e) => (state.top.current = e.target.scrollTop);
@@ -147,8 +146,7 @@ export default function App() {
       <div
         className='scrollArea'
         ref={scrollArea}
-        onScroll={onScroll}
-        {...events}>
+        onScroll={onScroll}>
         <div style={{ position: "sticky", top: 0 }} ref={domContent} />
         <div style={{ height: `${state.pages * 100}vh` }} />
       </div>
